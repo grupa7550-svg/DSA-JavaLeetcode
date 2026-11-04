@@ -13,7 +13,7 @@ class Solution:
         while heap:
             d, u = heapq.heappop(heap)
             if d > dist[u]:
-                continue                      # stale entry
+                continue
             for v, w in graph[u]:
                 nd = d + w
                 if nd < dist[v]:
